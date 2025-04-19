@@ -1,0 +1,12 @@
+### POST request to create new patient
+POST http://localhost:4000/patient-service/api/v1/patients
+Content-Type: application/json
+
+{
+  "name": "Ishara Deshan",
+  "email": "ishara@gmail.com",
+  "address": "123 Main St, Colombo",
+  "dateOfBirth": "2005-11-06"
+}
+
+###
