@@ -5,6 +5,8 @@ import com.pm.patientservice.dto.response.PatientResponseDTO;
 import com.pm.patientservice.entity.Patient;
 import com.pm.patientservice.exception.EmailAlreadyExistsException;
 import com.pm.patientservice.exception.PatientNotFoundException;
+import com.pm.patientservice.grpc.BillingServiceGrpcClient;
+import com.pm.patientservice.kafka.KafkaProducer;
 import com.pm.patientservice.mapper.PatientMapper;
 import com.pm.patientservice.repository.PatientRepository;
 import com.pm.patientservice.service.PatientService;
@@ -20,6 +22,8 @@ import java.util.UUID;
 public class PatientServiceImpl implements PatientService {
 
     private final PatientRepository patientRepository;
+    private final BillingServiceGrpcClient billingServiceGrpcClient;
+    private final KafkaProducer kafkaProducer;
 
     @Override
     public List<PatientResponseDTO> getAllPatients() {
@@ -37,6 +41,12 @@ public class PatientServiceImpl implements PatientService {
         }
 
         Patient newPatient = patientRepository.save(PatientMapper.toEntity(patientRequestDTO));
+        billingServiceGrpcClient.createBillingAccount(
+                newPatient.getId().toString(),
+                newPatient.getName(),
+                newPatient.getEmail());
+        kafkaProducer.sendEvent(newPatient);
+
 
         return PatientMapper.toDTO(newPatient);
     }
@@ -46,7 +56,7 @@ public class PatientServiceImpl implements PatientService {
         Patient patient = patientRepository.findById(id).orElseThrow(
                 () -> new PatientNotFoundException("Patient not found with id: " + id));
 
-        if (patientRepository.existsByEmail(patientRequestDTO.getEmail())) {
+        if (patientRepository.existsByEmailAndIdNot(patientRequestDTO.getEmail(), id)) {
             throw new EmailAlreadyExistsException("A patient with this email already exists" + patientRequestDTO.getEmail());
         }
 
@@ -60,4 +70,8 @@ public class PatientServiceImpl implements PatientService {
 
     }
 
+    @Override
+    public void deletePatient(UUID id) {
+        patientRepository.deleteById(id);
+    }
 }
