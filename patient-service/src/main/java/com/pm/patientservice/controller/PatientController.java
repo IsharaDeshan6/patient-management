@@ -1,4 +1,4 @@
-package com.pm.patientservice.api;
+package com.pm.patientservice.controller;
 
 import com.pm.patientservice.dto.request.PatientRequestDTO;
 import com.pm.patientservice.dto.response.PatientResponseDTO;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping("patient-service/api/v1/patients")
+@RequestMapping("patient-service/v1/patients")
 @RestController
 @RequiredArgsConstructor
-@Tag(name = "Patient", description = "AOI for managing patients")
+@Tag(name = "Patient", description = "API for managing patients")
 public class PatientController {
 
     private final PatientService patientService;
