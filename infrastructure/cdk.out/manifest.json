@@ -227,6 +227,258 @@
             "type": "aws:cdk:logicalId",
             "data": "MskCluster"
           }
+        ],
+        "/localstack1/PatientManagementCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementCluster98E10F8D"
+          }
+        ],
+        "/localstack1/PatientManagementCluster/DefaultServiceDiscoveryNamespace/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementClusterDefaultServiceDiscoveryNamespace72C5F264"
+          }
+        ],
+        "/localstack1/AuthServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTaskTaskRoleE466B974"
+          }
+        ],
+        "/localstack1/AuthServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTask82E6680D"
+          }
+        ],
+        "/localstack1/AuthServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTaskExecutionRoleA1258495"
+          }
+        ],
+        "/localstack1/AuthServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTaskExecutionRoleDefaultPolicyF20AD0D3"
+          }
+        ],
+        "/localstack1/AuthServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceLogGroup34125B38"
+          }
+        ],
+        "/localstack1/AuthService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
+              "Annotations.addWarningV2 (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
+              "new BaseService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\base\\base-service.js:1:8100)",
+              "new FargateService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\fargate\\fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:548:25)",
+              "Kernel.create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:218:93)",
+              "KernelHost.processRequest (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15471:36)",
+              "KernelHost.run (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15431:22)",
+              "Immediate._onImmediate (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/localstack1/AuthService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthService3C2B741A"
+          }
+        ],
+        "/localstack1/AuthService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceSecurityGroup67F2FA7D"
+          }
+        ],
+        "/localstack1/BillingServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTaskTaskRole7A547BBF"
+          }
+        ],
+        "/localstack1/BillingServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTask30D9C66E"
+          }
+        ],
+        "/localstack1/BillingServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTaskExecutionRole11FE8DE2"
+          }
+        ],
+        "/localstack1/BillingServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTaskExecutionRoleDefaultPolicy4F4033C9"
+          }
+        ],
+        "/localstack1/BillingServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceLogGroupDD61E740"
+          }
+        ],
+        "/localstack1/BillingService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
+              "Annotations.addWarningV2 (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
+              "new BaseService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\base\\base-service.js:1:8100)",
+              "new FargateService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\fargate\\fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:548:25)",
+              "Kernel.create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:218:93)",
+              "KernelHost.processRequest (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15471:36)",
+              "KernelHost.run (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15431:22)",
+              "Immediate._onImmediate (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/localstack1/BillingService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceFEB36D90"
+          }
+        ],
+        "/localstack1/BillingService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceSecurityGroup3783AD35"
+          }
+        ],
+        "/localstack1/AnalyticsServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskTaskRole1ABB10CB"
+          }
+        ],
+        "/localstack1/AnalyticsServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskC3AFBC47"
+          }
+        ],
+        "/localstack1/AnalyticsServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskExecutionRoleBAF654B2"
+          }
+        ],
+        "/localstack1/AnalyticsServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskExecutionRoleDefaultPolicy99868928"
+          }
+        ],
+        "/localstack1/AnalyticsServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceLogGroupBD82F12A"
+          }
+        ],
+        "/localstack1/AnalyticsService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
+              "Annotations.addWarningV2 (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
+              "new BaseService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\base\\base-service.js:1:8100)",
+              "new FargateService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\fargate\\fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:548:25)",
+              "Kernel.create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:218:93)",
+              "KernelHost.processRequest (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15471:36)",
+              "KernelHost.run (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15431:22)",
+              "Immediate._onImmediate (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/localstack1/AnalyticsService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceCD38C492"
+          }
+        ],
+        "/localstack1/AnalyticsService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceSecurityGroupBA6AE98A"
+          }
+        ],
+        "/localstack1/PatientServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskTaskRole4FB5B4E2"
+          }
+        ],
+        "/localstack1/PatientServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskF865B565"
+          }
+        ],
+        "/localstack1/PatientServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskExecutionRole3782903B"
+          }
+        ],
+        "/localstack1/PatientServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskExecutionRoleDefaultPolicy3866E91E"
+          }
+        ],
+        "/localstack1/PatientServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceLogGroup4A5C3809"
+          }
+        ],
+        "/localstack1/PatientService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
+              "Annotations.addWarningV2 (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
+              "new BaseService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\base\\base-service.js:1:8100)",
+              "new FargateService (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-kernel-kGcEnJ\\node_modules\\aws-cdk-lib\\aws-ecs\\lib\\fargate\\fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:548:25)",
+              "Kernel.create (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:218:93)",
+              "KernelHost.processRequest (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15471:36)",
+              "KernelHost.run (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15431:22)",
+              "Immediate._onImmediate (C:\\Users\\ISHARA~1\\AppData\\Local\\Temp\\jsii-java-runtime4025384428599423295\\lib\\program.js:15432:46)",
+              "process.processImmediate (node:internal/timers:491:21)"
+            ]
+          }
+        ],
+        "/localstack1/PatientService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceA65AB800"
+          }
+        ],
+        "/localstack1/PatientService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceSecurityGroup547BE1F2"
+          }
         ]
       },
       "displayName": "localstack1"
