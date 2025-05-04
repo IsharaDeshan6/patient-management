@@ -10,7 +10,7 @@
         <module name="integration-tests" />
         <module name="infrastructure" />
       </profile>
-      <profile name="Annotation profile for patient-service" enabled="true">
+      <profile name="Annotation profile for api-gateway" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

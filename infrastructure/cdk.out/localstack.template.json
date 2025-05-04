@@ -39,7 +39,7 @@
      },
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet1"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet1"
      }
     ],
     "VpcId": {
@@ -53,7 +53,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet1"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet1"
      }
     ],
     "VpcId": {
@@ -94,7 +94,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet1"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet1"
      }
     ]
    }
@@ -114,7 +114,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet1"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet1"
      }
     ]
    },
@@ -147,7 +147,7 @@
      },
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet2"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet2"
      }
     ],
     "VpcId": {
@@ -161,7 +161,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet2"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet2"
      }
     ],
     "VpcId": {
@@ -202,7 +202,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet2"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet2"
      }
     ]
    }
@@ -222,7 +222,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PublicSubnet2"
+      "Value": "localstack/PatientManagementVPC/PublicSubnet2"
      }
     ]
    },
@@ -255,7 +255,7 @@
      },
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PrivateSubnet1"
+      "Value": "localstack/PatientManagementVPC/PrivateSubnet1"
      }
     ],
     "VpcId": {
@@ -269,7 +269,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PrivateSubnet1"
+      "Value": "localstack/PatientManagementVPC/PrivateSubnet1"
      }
     ],
     "VpcId": {
@@ -324,7 +324,7 @@
      },
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PrivateSubnet2"
+      "Value": "localstack/PatientManagementVPC/PrivateSubnet2"
      }
     ],
     "VpcId": {
@@ -338,7 +338,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "localstack1/PatientManagementVPC/PrivateSubnet2"
+      "Value": "localstack/PatientManagementVPC/PrivateSubnet2"
      }
     ],
     "VpcId": {
@@ -421,7 +421,7 @@
     }
    }
   },
-  "localstack1AuthServiceDBSecret811D5C3A3fdaad7efa858a3daf9490cf0a702aeb": {
+  "localstackAuthServiceDBSecretE93C53FD3fdaad7efa858a3daf9490cf0a702aeb": {
    "Type": "AWS::SecretsManager::Secret",
    "Properties": {
     "Description": {
@@ -449,7 +449,7 @@
    "Type": "AWS::SecretsManager::SecretTargetAttachment",
    "Properties": {
     "SecretId": {
-     "Ref": "localstack1AuthServiceDBSecret811D5C3A3fdaad7efa858a3daf9490cf0a702aeb"
+     "Ref": "localstackAuthServiceDBSecretE93C53FD3fdaad7efa858a3daf9490cf0a702aeb"
     },
     "TargetId": {
      "Ref": "AuthServiceDBC6B688BA"
@@ -475,7 +475,7 @@
       [
        "{{resolve:secretsmanager:",
        {
-        "Ref": "localstack1AuthServiceDBSecret811D5C3A3fdaad7efa858a3daf9490cf0a702aeb"
+        "Ref": "localstackAuthServiceDBSecretE93C53FD3fdaad7efa858a3daf9490cf0a702aeb"
        },
        ":SecretString:password::}}"
       ]
@@ -525,7 +525,7 @@
     }
    }
   },
-  "localstack1PatientServiceDBSecret9F6276B93fdaad7efa858a3daf9490cf0a702aeb": {
+  "localstackPatientServiceDBSecret20E0A9443fdaad7efa858a3daf9490cf0a702aeb": {
    "Type": "AWS::SecretsManager::Secret",
    "Properties": {
     "Description": {
@@ -553,7 +553,7 @@
    "Type": "AWS::SecretsManager::SecretTargetAttachment",
    "Properties": {
     "SecretId": {
-     "Ref": "localstack1PatientServiceDBSecret9F6276B93fdaad7efa858a3daf9490cf0a702aeb"
+     "Ref": "localstackPatientServiceDBSecret20E0A9443fdaad7efa858a3daf9490cf0a702aeb"
     },
     "TargetId": {
      "Ref": "PatientServiceDBB84F9BF9"
@@ -579,7 +579,7 @@
       [
        "{{resolve:secretsmanager:",
        {
-        "Ref": "localstack1PatientServiceDBSecret9F6276B93fdaad7efa858a3daf9490cf0a702aeb"
+        "Ref": "localstackPatientServiceDBSecret20E0A9443fdaad7efa858a3daf9490cf0a702aeb"
        },
        ":SecretString:password::}}"
       ]
@@ -658,9 +658,9 @@
      ],
      "InstanceType": "kafka.m5.xlarge"
     },
-    "ClusterName": "kafka-cluster",
+    "ClusterName": "kafa-cluster",
     "KafkaVersion": "2.8.0",
-    "NumberOfBrokerNodes": 1
+    "NumberOfBrokerNodes": 2
    }
   },
   "PatientManagementCluster98E10F8D": {
@@ -704,7 +704,7 @@
        },
        {
         "Name": "JWT_SECRET",
-        "Value": "Uhfc71EuRq9DamC21ehznHmCMEKpiOF2RhTlk8U13mA="
+        "Value": "Y2hhVEc3aHJnb0hYTzMyZ2ZqVkpiZ1RkZG93YWxrUkM="
        },
        {
         "Name": "SPRING_DATASOURCE_URL",
@@ -777,7 +777,6 @@
         }
        }
       },
-      "Memory": 512,
       "Name": "auth-serviceContainer",
       "PortMappings": [
        {
@@ -795,7 +794,7 @@
       "Arn"
      ]
     },
-    "Family": "localstack1AuthServiceTaskCEEF1077",
+    "Family": "localstackAuthServiceTask4114E6CA",
     "Memory": "512",
     "NetworkMode": "awsvpc",
     "RequiresCompatibilities": [
@@ -910,7 +909,7 @@
    "DependsOn": [
     "AuthServiceDBC6B688BA",
     "AuthServiceDBSecretAttachmentF30406A9",
-    "localstack1AuthServiceDBSecret811D5C3A3fdaad7efa858a3daf9490cf0a702aeb",
+    "localstackAuthServiceDBSecretE93C53FD3fdaad7efa858a3daf9490cf0a702aeb",
     "AuthServiceDBSecurityGroupBE6D28EB",
     "AuthServiceDBSubnetGroupCFE5A552",
     "AuthServiceDBHealthCheck",
@@ -920,7 +919,7 @@
   "AuthServiceSecurityGroup67F2FA7D": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "localstack1/AuthService/SecurityGroup",
+    "GroupDescription": "localstack/AuthService/SecurityGroup",
     "SecurityGroupEgress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -935,7 +934,7 @@
    "DependsOn": [
     "AuthServiceDBC6B688BA",
     "AuthServiceDBSecretAttachmentF30406A9",
-    "localstack1AuthServiceDBSecret811D5C3A3fdaad7efa858a3daf9490cf0a702aeb",
+    "localstackAuthServiceDBSecretE93C53FD3fdaad7efa858a3daf9490cf0a702aeb",
     "AuthServiceDBSecurityGroupBE6D28EB",
     "AuthServiceDBSubnetGroupCFE5A552",
     "AuthServiceDBHealthCheck",
@@ -984,7 +983,6 @@
         }
        }
       },
-      "Memory": 512,
       "Name": "billing-serviceContainer",
       "PortMappings": [
        {
@@ -1007,7 +1005,7 @@
       "Arn"
      ]
     },
-    "Family": "localstack1BillingServiceTask95E4DDAD",
+    "Family": "localstackBillingServiceTaskAB0446C6",
     "Memory": "512",
     "NetworkMode": "awsvpc",
     "RequiresCompatibilities": [
@@ -1120,14 +1118,13 @@
     }
    },
    "DependsOn": [
-    "BillingServiceTaskTaskRole7A547BBF",
-    "MskCluster"
+    "BillingServiceTaskTaskRole7A547BBF"
    ]
   },
   "BillingServiceSecurityGroup3783AD35": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "localstack1/BillingService/SecurityGroup",
+    "GroupDescription": "localstack/BillingService/SecurityGroup",
     "SecurityGroupEgress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -1140,8 +1137,7 @@
     }
    },
    "DependsOn": [
-    "BillingServiceTaskTaskRole7A547BBF",
-    "MskCluster"
+    "BillingServiceTaskTaskRole7A547BBF"
    ]
   },
   "AnalyticsServiceTaskTaskRole1ABB10CB": {
@@ -1186,7 +1182,6 @@
         }
        }
       },
-      "Memory": 512,
       "Name": "analytics-serviceContainer",
       "PortMappings": [
        {
@@ -1204,7 +1199,7 @@
       "Arn"
      ]
     },
-    "Family": "localstack1AnalyticsServiceTaskC5659833",
+    "Family": "localstackAnalyticsServiceTask353A5B10",
     "Memory": "512",
     "NetworkMode": "awsvpc",
     "RequiresCompatibilities": [
@@ -1324,7 +1319,7 @@
   "AnalyticsServiceSecurityGroupBA6AE98A": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "localstack1/AnalyticsService/SecurityGroup",
+    "GroupDescription": "localstack/AnalyticsService/SecurityGroup",
     "SecurityGroupEgress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -1447,7 +1442,6 @@
         }
        }
       },
-      "Memory": 512,
       "Name": "patient-serviceContainer",
       "PortMappings": [
        {
@@ -1465,7 +1459,7 @@
       "Arn"
      ]
     },
-    "Family": "localstack1PatientServiceTask5308CDCE",
+    "Family": "localstackPatientServiceTask2770C053",
     "Memory": "512",
     "NetworkMode": "awsvpc",
     "RequiresCompatibilities": [
@@ -1580,9 +1574,10 @@
    "DependsOn": [
     "BillingServiceSecurityGroup3783AD35",
     "BillingServiceFEB36D90",
+    "MskCluster",
     "PatientServiceDBB84F9BF9",
     "PatientServiceDBSecretAttachment90D77B03",
-    "localstack1PatientServiceDBSecret9F6276B93fdaad7efa858a3daf9490cf0a702aeb",
+    "localstackPatientServiceDBSecret20E0A9443fdaad7efa858a3daf9490cf0a702aeb",
     "PatientServiceDBSecurityGroup6B97C0E5",
     "PatientServiceDBSubnetGroupCED49D16",
     "PatientServiceDBHealthCheck",
@@ -1592,7 +1587,7 @@
   "PatientServiceSecurityGroup547BE1F2": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "localstack1/PatientService/SecurityGroup",
+    "GroupDescription": "localstack/PatientService/SecurityGroup",
     "SecurityGroupEgress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -1607,9 +1602,10 @@
    "DependsOn": [
     "BillingServiceSecurityGroup3783AD35",
     "BillingServiceFEB36D90",
+    "MskCluster",
     "PatientServiceDBB84F9BF9",
     "PatientServiceDBSecretAttachment90D77B03",
-    "localstack1PatientServiceDBSecret9F6276B93fdaad7efa858a3daf9490cf0a702aeb",
+    "localstackPatientServiceDBSecret20E0A9443fdaad7efa858a3daf9490cf0a702aeb",
     "PatientServiceDBSecurityGroup6B97C0E5",
     "PatientServiceDBSubnetGroupCED49D16",
     "PatientServiceDBHealthCheck",
@@ -1662,8 +1658,7 @@
         }
        }
       },
-      "Memory": 512,
-      "Name": "ApiGatewayContainer",
+      "Name": "APIGatewayContainer",
       "PortMappings": [
        {
         "ContainerPort": 4004,
@@ -1680,7 +1675,7 @@
       "Arn"
      ]
     },
-    "Family": "localstack1APIGatewayTaskDefinitionD5ED3CFD",
+    "Family": "localstackAPIGatewayTaskDefinitionF109B4B7",
     "Memory": "512",
     "NetworkMode": "awsvpc",
     "RequiresCompatibilities": [
@@ -1749,7 +1744,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete"
   },
-  "ApiGatewayServiceLB661D42EC": {
+  "APIGatewayServiceLBDA2B7609": {
    "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
    "Properties": {
     "LoadBalancerAttributes": [
@@ -1762,7 +1757,7 @@
     "SecurityGroups": [
      {
       "Fn::GetAtt": [
-       "ApiGatewayServiceLBSecurityGroup0E508841",
+       "APIGatewayServiceLBSecurityGroup8524BFD1",
        "GroupId"
       ]
      }
@@ -1784,10 +1779,10 @@
     "PatientManagementVPCPublicSubnet2RouteTableAssociationCAC8BA09"
    ]
   },
-  "ApiGatewayServiceLBSecurityGroup0E508841": {
+  "APIGatewayServiceLBSecurityGroup8524BFD1": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "Automatically created Security Group for ELB localstack1ApiGatewayServiceLBB7BE5024",
+    "GroupDescription": "Automatically created Security Group for ELB localstackAPIGatewayServiceLB0192615A",
     "SecurityGroupIngress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -1802,20 +1797,20 @@
     }
    }
   },
-  "ApiGatewayServiceLBSecurityGrouptolocalstack1ApiGatewayServiceSecurityGroup8B4AC5E9400409A323DB": {
+  "APIGatewayServiceLBSecurityGrouptolocalstackAPIGatewayServiceSecurityGroup37054EEE4004CAF8FB32": {
    "Type": "AWS::EC2::SecurityGroupEgress",
    "Properties": {
     "Description": "Load balancer to target",
     "DestinationSecurityGroupId": {
      "Fn::GetAtt": [
-      "ApiGatewayServiceSecurityGroup867C9DB1",
+      "APIGatewayServiceSecurityGroup98F3B93B",
       "GroupId"
      ]
     },
     "FromPort": 4004,
     "GroupId": {
      "Fn::GetAtt": [
-      "ApiGatewayServiceLBSecurityGroup0E508841",
+      "APIGatewayServiceLBSecurityGroup8524BFD1",
       "GroupId"
      ]
     },
@@ -1823,25 +1818,25 @@
     "ToPort": 4004
    }
   },
-  "ApiGatewayServiceLBPublicListenerA86B9BC4": {
+  "APIGatewayServiceLBPublicListenerD6FA7F47": {
    "Type": "AWS::ElasticLoadBalancingV2::Listener",
    "Properties": {
     "DefaultActions": [
      {
       "TargetGroupArn": {
-       "Ref": "ApiGatewayServiceLBPublicListenerECSGroup0BFE5495"
+       "Ref": "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70"
       },
       "Type": "forward"
      }
     ],
     "LoadBalancerArn": {
-     "Ref": "ApiGatewayServiceLB661D42EC"
+     "Ref": "APIGatewayServiceLBDA2B7609"
     },
     "Port": 80,
     "Protocol": "HTTP"
    }
   },
-  "ApiGatewayServiceLBPublicListenerECSGroup0BFE5495": {
+  "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70": {
    "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
    "Properties": {
     "Port": 80,
@@ -1858,7 +1853,7 @@
     }
    }
   },
-  "ApiGatewayService4908847F": {
+  "APIGatewayServiceA5206149": {
    "Type": "AWS::ECS::Service",
    "Properties": {
     "Cluster": {
@@ -1879,10 +1874,10 @@
     "LaunchType": "FARGATE",
     "LoadBalancers": [
      {
-      "ContainerName": "ApiGatewayContainer",
+      "ContainerName": "APIGatewayContainer",
       "ContainerPort": 4004,
       "TargetGroupArn": {
-       "Ref": "ApiGatewayServiceLBPublicListenerECSGroup0BFE5495"
+       "Ref": "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70"
       }
      }
     ],
@@ -1892,7 +1887,7 @@
       "SecurityGroups": [
        {
         "Fn::GetAtt": [
-         "ApiGatewayServiceSecurityGroup867C9DB1",
+         "APIGatewayServiceSecurityGroup98F3B93B",
          "GroupId"
         ]
        }
@@ -1913,15 +1908,15 @@
     }
    },
    "DependsOn": [
-    "ApiGatewayServiceLBPublicListenerECSGroup0BFE5495",
-    "ApiGatewayServiceLBPublicListenerA86B9BC4",
+    "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70",
+    "APIGatewayServiceLBPublicListenerD6FA7F47",
     "APIGatewayTaskDefinitionTaskRole894A199F"
    ]
   },
-  "ApiGatewayServiceSecurityGroup867C9DB1": {
+  "APIGatewayServiceSecurityGroup98F3B93B": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "localstack1/ApiGatewayService/Service/SecurityGroup",
+    "GroupDescription": "localstack/APIGatewayService/Service/SecurityGroup",
     "SecurityGroupEgress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -1937,21 +1932,21 @@
     "APIGatewayTaskDefinitionTaskRole894A199F"
    ]
   },
-  "ApiGatewayServiceSecurityGroupfromlocalstack1ApiGatewayServiceLBSecurityGroup55EFD68A40040A831128": {
+  "APIGatewayServiceSecurityGroupfromlocalstackAPIGatewayServiceLBSecurityGroup32B4CA424004CA85E4CD": {
    "Type": "AWS::EC2::SecurityGroupIngress",
    "Properties": {
     "Description": "Load balancer to target",
     "FromPort": 4004,
     "GroupId": {
      "Fn::GetAtt": [
-      "ApiGatewayServiceSecurityGroup867C9DB1",
+      "APIGatewayServiceSecurityGroup98F3B93B",
       "GroupId"
      ]
     },
     "IpProtocol": "tcp",
     "SourceSecurityGroupId": {
      "Fn::GetAtt": [
-      "ApiGatewayServiceLBSecurityGroup0E508841",
+      "APIGatewayServiceLBSecurityGroup8524BFD1",
       "GroupId"
      ]
     },
@@ -1963,15 +1958,15 @@
   }
  },
  "Outputs": {
-  "ApiGatewayServiceLoadBalancerDNS40D66446": {
+  "APIGatewayServiceLoadBalancerDNS7C7318A3": {
    "Value": {
     "Fn::GetAtt": [
-     "ApiGatewayServiceLB661D42EC",
+     "APIGatewayServiceLBDA2B7609",
      "DNSName"
     ]
    }
   },
-  "ApiGatewayServiceServiceURL8E0540A6": {
+  "APIGatewayServiceServiceURL95056890": {
    "Value": {
     "Fn::Join": [
      "",
@@ -1979,7 +1974,7 @@
       "http://",
       {
        "Fn::GetAtt": [
-        "ApiGatewayServiceLB661D42EC",
+        "APIGatewayServiceLBDA2B7609",
         "DNSName"
        ]
       }

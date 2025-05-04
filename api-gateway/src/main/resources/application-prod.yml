@@ -1,0 +1,47 @@
+server:
+  port: 4004
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        ## REST CLIENT -> http://localhost:4004/api/patient-service/v1/patients
+        ## API GATEWAY -> http://patitent-service:4000/patient-service/v1/patients
+        ## PATIENT SERVICE (SPRING BOOT APP) -> /patients -> Patients Array
+
+        - id: patient-service-route
+          uri: http://host.docker.internal:4000
+          predicates:
+            - Path=/api/patient-service/v1/patients/**
+          filters:
+            - StripPrefix=1
+            - JwtValidation
+
+          ## REST CLIENT -> http://localhost:4004/auth/login
+          ## API GATEWAY -> http://auth-service:4005/login
+
+        - id: auth-service-route
+          # auth-ecs-service-dev.us-east-1.elasticbeanstalk.com
+          uri: http://host.docker.internal:4005
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+          ## REST CLIENT -> http://localhost:4004/api-docs/patient-service/v1/patients
+          ## API GATEWAY -> http://patitent-service:4000/v3/api-docs
+
+        - id: api-docs-patient-route
+          uri: http://host.docker.internal:4000
+          predicates:
+            - Path=/api-docs/patient-service/v1/patients
+          filters:
+            - RewritePath=/api-docs/patient-service/v1/patients,/v3/api-docs
+
+        - id: api-docs-auth-route
+          uri: http://host.docker.internal:4005
+          predicates:
+            - Path=/api-docs/auth
+          filters:
+            - RewritePath=/api-docs/auth,/v3/api-docs
+

@@ -4,6 +4,8 @@ import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class PatientIntegrationTest {
 
     @BeforeAll
@@ -17,6 +19,47 @@ public class PatientIntegrationTest {
         //2.Act
         //3.Assert
 
+        String token = getToken();
+
+
+        RestAssured.given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .get("/api/patient-service/v1/patients")
+                .then()
+                .statusCode(200)
+                .body("data.patients", Matchers.notNullValue());
+
+    }
+
+
+    @Test
+    public void shouldReturn429AfterLimitExceed() throws InterruptedException {
+        String token = getToken();
+        int total = 10;
+        int tooManyRequests = 0;
+
+        for (int i = 0; i <= total; i++) {
+            Response response = RestAssured.given()
+                    .header("Authorization", "Bearer " + token)
+                    .when()
+                    .get("/api/patient-service/v1/patients");
+
+            System.out.printf("Request %d -> Status: %d%n", i,
+                    response.getStatusCode());
+
+            if (response.getStatusCode() == 429) {
+                tooManyRequests++;
+            }
+            Thread.sleep(100); // Sleep for 100 milliseconds between requests
+        }
+
+        assertTrue(tooManyRequests >= 1,
+                "Expected at least 1 request to be rate limited (429)");
+
+    }
+
+    private static String getToken() {
         String loginPayLoad = """
                 {
                     "email": "testuser@test.com",
@@ -34,17 +77,7 @@ public class PatientIntegrationTest {
                 .extract()
                 .jsonPath()
                 .get("data.token");
-
-
-        RestAssured.given()
-                .header("Authorization", "Bearer " + token)
-                .when()
-                .get("/api/patient-service/v1/patients")
-                .then()
-                .statusCode(200)
-                .body("data.patients", Matchers.notNullValue());
-
+        return token;
     }
-
 
 }

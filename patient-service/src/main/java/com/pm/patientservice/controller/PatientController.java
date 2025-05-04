@@ -1,6 +1,7 @@
 package com.pm.patientservice.controller;
 
 import com.pm.patientservice.dto.request.PatientRequestDTO;
+import com.pm.patientservice.dto.response.PagedPatientResponseDTO;
 import com.pm.patientservice.dto.response.PatientResponseDTO;
 import com.pm.patientservice.service.PatientService;
 import com.pm.patientservice.util.StandardResponse;
@@ -24,10 +25,17 @@ public class PatientController {
     private final PatientService patientService;
 
 
+    //http://localhost:4004/api/patient-service/v1/patients?page=1&size=10
     @GetMapping
     @Operation(summary = "Get Patients")
-    public ResponseEntity<StandardResponse> getPatients(){
-        List<PatientResponseDTO> allPatients = patientService.getAllPatients();
+    public ResponseEntity<StandardResponse> getPatients(
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "asc") String sortBy,
+            @RequestParam(defaultValue = "name") String sortField,
+            @RequestParam(defaultValue = "") String searchValue
+    ){
+        PagedPatientResponseDTO allPatients = patientService.getAllPatients(page, size, sortBy, sortField, searchValue);
         return new ResponseEntity<>(
                 new StandardResponse(200,"Patients retrieved successfully",allPatients),
                 HttpStatus.OK
