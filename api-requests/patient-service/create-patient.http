@@ -1,10 +1,12 @@
 ### POST request to create new patient
-POST http://localhost:4000/patient-service/v1/patients
+#POST http://localhost:4000/patient-service/v1/patients
+POST http://localhost:4004/api/patient-service/v1/patients
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "name": "Ishara Deshan Kafka Test",
-  "email": "deshan@gmail.com",
+  "email": "kafka_test13111@gmail.com",
   "address": "123 Main St, Colombo",
   "dateOfBirth": "2005-11-06"
 }
