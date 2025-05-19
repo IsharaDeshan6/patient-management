@@ -41,8 +41,6 @@ public class PatientServiceImpl implements PatientService {
     )
     public PagedPatientResponseDTO getAllPatients(int page, int size, String sortBy, String sortField, String searchValue) {
 
-        log.info("[REDIS] : Cache miss - fetching data from database");
-
         try {
             Thread.sleep(2000);
         }catch (InterruptedException e){

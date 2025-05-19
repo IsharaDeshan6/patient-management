@@ -63,7 +63,7 @@ public class PatientController {
     }
 
     @DeleteMapping("/{id}")
-    @Operation(summary = "Delete a Patien t")
+    @Operation(summary = "Delete a Patient")
     public ResponseEntity<StandardResponse> deletePatient(@PathVariable UUID id){
         patientService.deletePatient(id);
         return new ResponseEntity<>(
